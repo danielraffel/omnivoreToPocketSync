@@ -5,7 +5,7 @@ This repository contains a Cloud Function designed for Google Cloud Platform's v
 ## Purpose
 `omnivoreToPocketSync` automates the process of transferring new bookmarks from Omnivore.app directly into your Pocket account. This functionality is especially beneficial for those who have shifted from using Pocket to Omnivore for their bookmarking needs, enabling them to sync their newly added Omnivore content back to their Pocket collection.
 
-## Important
+## Note Before Using 
 Before running this function, it's crucial to import your existing Pocket bookmarks into Omnivore first. Failing to do so will trigger a repetitive cycle where bookmarks are endlessly transferred back and forth between Pocket and Omnivore. 🔁 This function is specifically tailored for users who have fully embraced the Omnivore bookmark system and wish to mirror their Omnivore-bookrmark-saved content in Pocket.
 
 ## Setup Instructions
