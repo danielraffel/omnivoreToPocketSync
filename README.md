@@ -3,7 +3,10 @@
 This repository contains a Cloud Function designed for Google Cloud Platform's v2 Cloud Functions. It is intended to integrate with Omnivore.app's webhook system, triggering actions in Pocket. When Omnivore.app sends a webhook, this function processes the data and posts the bookmark data to Pocket's API.
 
 ## Purpose
-The `omnivoreToPocketSync` function serves as a connector between Omnivore.app's webhook alerts and Pocket. It facilitates the automatic transfer of content bookmarks from Omnivore.app to Pocket. This is particularly useful for users who have transitioned from Pocket to Omnivore for bookmarking purposes, allowing them to continue populating their Pocket archive with new content added via Omnivore.
+`omnivoreToPocketSync` automates the process of transferring new bookmarks from Omnivore.app directly into your Pocket account. This functionality is especially beneficial for those who have shifted from using Pocket to Omnivore for their bookmarking needs, enabling them to sync their newly added Omnivore content back to their Pocket collection.
+
+## Important
+Before running this function, it's crucial to import your existing Pocket bookmarks into Omnivore first. Failing to do so will trigger a repetitive cycle where bookmarks are endlessly transferred back and forth between Pocket and Omnivore. 🔁 This function is specifically tailored for users who have fully embraced the Omnivore bookmark system and wish to mirror their Omnivore-bookrmark-saved content in Pocket.
 
 ## Setup Instructions
 
