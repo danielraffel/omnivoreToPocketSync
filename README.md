@@ -16,7 +16,7 @@ Before running this function, it's crucial to import your existing Pocket bookma
 2. Request the necessary permissions for your app.
 3. After creating the app, note down the `consumer_key` provided.
 
-### Step 2: Obtain a Request Token Using Postman
+### Step 2: Obtain a Request Token from Pocket Using Postman
 
 1. Open Postman and create a new request.
 2. Set the HTTP method to POST.
@@ -37,7 +37,7 @@ Before running this function, it's crucial to import your existing Pocket bookma
    For `YOUR_REDIRECT_URI`, use a URI where you want Pocket to redirect post-authorization (e.g., `http://github.com`).
 7. Send the request and note down the request token from the response.
 
-### Step 3: Authorize with Pocket
+### Step 3: Authorize your app with your Pocket account
 
 1. Construct the authorization URL:
    ``` 
@@ -46,7 +46,7 @@ Before running this function, it's crucial to import your existing Pocket bookma
    Replace `YOUR_REQUEST_TOKEN` and `YOUR_REDIRECT_URI` with the content from Step 2
 2. Navigate to this URL in a web browser. You'll be redirected to the specified URI upon successful authorization.
 
-### Step 4: Convert Request Token into Pocket Access Token
+### Step 4: Convert your Request Token into a Pocket Access Token
 
 1. Set up a new POST request in Postman to `https://getpocket.com/v3/oauth/authorize`.
 2. Add Headers:
@@ -68,11 +68,11 @@ Before running this function, it's crucial to import your existing Pocket bookma
 2. Name it `omnivoreToPocketSync`.
 3. Choose "Allow unauthenticated invocations" under authentication.
 4. Copy the trigger URL.
-5. In the editor, paste the [function code](https://github.com/danielraffel/omnivoreToPocketSync/blob/main/index.js) into `index.js` and update the `consumerKey` and `accessToken` with your values from Steps 1 and 4.
+5. In the editor, paste the [function code](https://github.com/danielraffel/omnivoreToPocketSync/blob/main/index.js) into `index.js` and update the `consumerKey` and `accessToken` with your values from Steps 1 and 4. Name your endpoint `omnivoreToPocketSync`.
 6. Next, paste the [package file](https://github.com/danielraffel/omnivoreToPocketSync/blob/main/package.json) into `package.json`
 7. Deploy the function.
 
-### Step 6: Set Up Omnivore Webhook
+### Step 6: Set Up Your Omnivore Webhook
 
 1. Visit [Omnivore Webhooks Settings](https://omnivore.app/settings/webhooks).
 2. Enter the trigger URL you copied from the Cloud Function setup in step 5
